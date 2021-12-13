@@ -1,0 +1,32 @@
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks -Indexes -MultiViews
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  
+  RewriteRule ^contents/(\d+)/nd/(\d+)/sid/(\d+)  contents.php?id=$1&nd=$2&sid=$3 [N,L]
+  RewriteRule ^contents/(\d+)/cat/(\d+)/sid/(\d+)  contents.php?id=$1&cat=$2&sid=$3 [N,L]
+  RewriteRule ^contents/(\d+)/cat/(\d+)/page/(\d+)  contents.php?id=$1&cat=$2&page=$3 [N,L]
+  RewriteRule ^contents/(\d+)/page/(\d+)  contents.php?id=$1&page=$2 [N,L]
+  RewriteRule ^contents/(\d+)/nd/(\d+)  contents.php?id=$1&nd=$2 [N,L]
+  RewriteRule ^contents/(\d+)/cat/(\d+)  contents.php?id=$1&cat=$2 [N,L]
+  RewriteRule ^contents/(\d+)/ncat/(\d+)/page/(\d+)  contents.php?id=$1&ncat=$2&page=$3 [N,L]
+  RewriteRule ^contents/(\d+)/ncat/(\d+)/nid/(\d+)  contents.php?id=$1&ncat=$2&nid=$3 [N,L]
+  RewriteRule ^contents/(\d+)/ncat/(\d+)  contents.php?id=$1&ncat=$2 [N,L]
+  RewriteRule ^contents/(\d+)/nid/(\d+)  contents.php?id=$1&nid=$2 [N,L]
+  RewriteRule ^contents/(\d+)/sid/(\d+)  contents.php?id=$1&sid=$2 [N,L]
+  RewriteRule ^contents/([a-zA-Z0-9\.]+)  contents.php?id=$1 [N,L]
+  
+  RewriteRule ^m/contents/(\d+)/nd/(\d+)/sid/(\d+)  m/contents.php?id=$1&nd=$2&sid=$3 [N,L]
+  RewriteRule ^m/contents/(\d+)/cat/(\d+)/sid/(\d+)  m/contents.php?id=$1&cat=$2&sid=$3 [N,L]
+  RewriteRule ^m/contents/(\d+)/cat/(\d+)/page/(\d+)  m/contents.php?id=$1&cat=$2&page=$3 [N,L]
+  RewriteRule ^m/contents/(\d+)/page/(\d+)  m/contents.php?id=$1&page=$2 [N,L]
+  RewriteRule ^m/contents/(\d+)/nd/(\d+)  m/contents.php?id=$1&nd=$2 [N,L]
+  RewriteRule ^m/contents/(\d+)/cat/(\d+)  m/contents.php?id=$1&cat=$2 [N,L]
+  RewriteRule ^m/contents/(\d+)/ncat/(\d+)/page/(\d+)  m/contents.php?id=$1&ncat=$2&page=$3 [N,L]
+  RewriteRule ^m/contents/(\d+)/ncat/(\d+)/nid/(\d+)  m/contents.php?id=$1&ncat=$2&nid=$3 [N,L]
+  RewriteRule ^m/contents/(\d+)/ncat/(\d+)  m/contents.php?id=$1&ncat=$2 [N,L]
+  RewriteRule ^m/contents/(\d+)/nid/(\d+)  m/contents.php?id=$1&nid=$2 [N,L]
+  RewriteRule ^m/contents/(\d+)/sid/(\d+)  m/contents.php?id=$1&sid=$2 [N,L]
+  RewriteRule ^m/contents/([a-zA-Z0-9\.]+)  m/contents.php?id=$1 [N,L]
+</IfModule>
